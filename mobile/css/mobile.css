@@ -18,7 +18,7 @@
 	}
 	#main {
 		order: 1;
-		margin-top: 80px;
+		margin-top: 90px;
 	}
 	#footer {
 		order: 3;
@@ -96,7 +96,6 @@
 
 	/* Icons (font from Icomoon) */
 
-	#autoread .current .autoreadentry:first-of-type:after,
 	#mainlink_edit:after,
 	#mainlink_search:after,
 	.opt_link[href='quicklove.php']:after {
@@ -110,7 +109,6 @@
 	  -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
 	}
-	#autoread .current .autoreadentry:first-of-type,
 	#mainlink_edit,
 	#mainlink_search,
 	.opt_link[href='quicklove.php'] {
@@ -120,33 +118,37 @@
 	#mainlink_edit,
 	#mainlink_search,
 	.opt_link[href='quicklove.php'] {
-		top: 30px;
-		color: var( --black );
+		top: 35px;
+		left: 50%;
+		color: var( --dark-gray );
 		font-size: 0;
 		text-decoration: none;
 	}
 	#mainlink_edit:after,
 	#mainlink_search:after,
 	.opt_link[href='quicklove.php']:after {
-		font-size: 2rem;
+		font-size: 1.1rem;
 	}
 	#mainlink_edit:after {
+		margin-left: -65px;
 		content: "\e906";
 	}
 	#mainlink_search:after {
+		margin-left: -100px;
 		content: "\e986";
 	}
 	.opt_link[href='quicklove.php']:after {
+		margin-left: -145px;
 		content: "\e970";
 	}
 	#autoread .current .autoreadentry:first-of-type {
-		margin-left: 45px;
+		margin-left: 40px;
 		position: absolute;
 		top: 30px;
 		left: 50%;
 	}
 	#autoread .current .autoreadentry:first-of-type a {
-		color: var( --black );
+		color: var( --dark-gray );
 		font-weight: 500;
 		text-decoration: none;
 	}
@@ -155,11 +157,6 @@
 	}
 	#autoread .current .autoreadentry:first-of-type a:after {
 		content: ']';
-	}
-	#autoread .current .autoreadentry:first-of-type:after {
-		display: inline-block;
-		margin-left: 3px;
-		content: "\ea42";
 	}
 
 /* ==========================================================================
@@ -214,6 +211,21 @@
 	}
 	.plan .sub {
 		word-wrap: break-word;
+	}
+
+/* ==========================================================================
+   Edit plan
+   ========================================================================== */
+
+	#edit_textarea {
+		box-sizing: border-box;
+		width: 100%;
+		height: 75vh;
+		padding: 0 var( --gutter-width );
+		border-left: none;
+		border-right: none;
+		font-size: 0.9rem;
+		line-height: 1.4;
 	}
 }
 
