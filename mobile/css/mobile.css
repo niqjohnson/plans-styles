@@ -47,11 +47,11 @@
 
 	@font-face {
 		font-family: 'icomoon';
-		src: url('../fonts/icomoon.eot?40me75');
-		src: url('../fonts/icomoon.eot?40me75#iefix') format('embedded-opentype'),
-		     url('../fonts/icomoon.ttf?40me75') format('truetype'),
-		     url('../fonts/icomoon.woff?40me75') format('woff'),
-		     url('../fonts/icomoon.svg?40me75#icomoon') format('svg');
+		src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?40me75');
+		src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?40me75#iefix') format('embedded-opentype'),
+		     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.ttf?40me75') format('truetype'),
+		     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.woff?40me75') format('woff'),
+		     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.svg?40me75#icomoon') format('svg');
 		font-weight: normal;
 		font-style: normal;
 	}
