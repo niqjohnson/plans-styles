@@ -2,6 +2,9 @@
 	 Page structure
    ========================================================================== */
 
+html {
+	width: 375px;
+}
 body {
 	margin: 0;
 	--gutter-width: 20px;
@@ -10,6 +13,7 @@ body {
 #wrapper {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 #nav {
 	order: 2;
