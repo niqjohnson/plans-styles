@@ -1,25 +1,11 @@
 /* ==========================================================================
-	 Page structure
+	 Variables
    ========================================================================== */
 
 body {
-	margin: 0;
-	--gutter-width: 20px;
-	--negative-gutter-width: -20px;
-}
-#wrapper {
-	display: flex;
-	flex-direction: column;
-}
-#nav {
-	order: 2;
-}
-#main {
-	order: 1;
-	margin-top: 90px;
-}
-#footer {
-	order: 3;
+	--gutter-width:           6vmin;
+	--logo-radius:           18vmin;
+	--icon-font-size:         5vmin;
 }
 
 /* ==========================================================================
@@ -40,16 +26,38 @@ body {
 }
 
 /* ==========================================================================
+	 Page structure
+   ========================================================================== */
+
+body {
+	margin: 0;
+}
+#wrapper {
+	display: flex;
+	flex-direction: column;
+}
+#nav {
+	order: 2;
+}
+#main {
+	order: 1;
+	margin-top: calc( var( --logo-radius ) + 6vmin );
+}
+#footer {
+	order: 3;
+}
+
+/* ==========================================================================
 	 Global typography
    ========================================================================== */
 
 @font-face {
 	font-family: 'icomoon';
-	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?40me75');
-	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?40me75#iefix') format('embedded-opentype'),
-	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.ttf?40me75') format('truetype'),
-	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.woff?40me75') format('woff'),
-	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.svg?40me75#icomoon') format('svg');
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte');
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte#iefix') format('embedded-opentype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.ttf?shkte') format('truetype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.woff?shkte') format('woff'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.svg?shkte#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -68,7 +76,7 @@ body {
 #logo {
 	width: 100%;
 	position: absolute;
-	top: 10px;
+	top: calc( var( --gutter-width ) / 2 );
 	text-align: center;
 }
 #logo a {
@@ -77,30 +85,29 @@ body {
 }
 #logo a:before {
 	display: inline-block;
-	width: 60px;
-	height: 60px;
-	border-radius: 60px;
+	width: var( --logo-radius );
+	height: var( --logo-radius );
+	border-radius: var( --logo-radius );
 	background-color: var( --black );
 	color: var( --white );
 	content: '[p]';
-	font-size: 1.8rem;
+	font-size: 10vmin;
 	font-weight: 200;
-	line-height: 54px;
+	line-height: 16vmin;
 }
 
 /* Icons (font from Icomoon) */
 
 #mainlink_edit:after,
-#mainlink_search:after,
 .opt_link[href='quicklove.php']:after,
 #autoread .current .autoreadentry:first-of-type a:after {
 	display: block;
 	position: absolute;
-	top: 35px;
+	top: calc( ( var( --logo-radius ) / 2 ) + ( var( --gutter-width ) / 2 ) );
 	left: 50%;
-	color: var( --dark-gray );
+	color: var( --gray-60 );
 	font-family: 'icomoon' !important;
-	font-size: 1.1rem;
+	font-size: var( --icon-font-size );
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
@@ -112,19 +119,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #mainlink_edit:after {
-	margin-left: -78px;
+	margin-top: calc( -0.3 * var( --icon-font-size ) );
+	margin-left: calc( ( -0.5 * var( --icon-font-size ) ) - var( --logo-radius ) );
 	content: "\e906";
 }
-#mainlink_search:after {
-	margin-left: 60px;
-	content: "\e986";
-}
 .opt_link[href='quicklove.php']:after {
-	margin-left: -127px;
-	content: "\e970";
+	margin-top: calc( -0.3 * var( --icon-font-size ) );
+	margin-left: calc( ( -0.5 * var( --icon-font-size ) ) + var( --logo-radius ) );
+	content: "\e9da";
 }
 #autoread .current .autoreadentry:first-of-type a:after {
-	margin-left: 110px;
+	margin-top: calc( -0.3 * var( --icon-font-size ) );
+	margin-left: calc( ( -0.5 * var( --icon-font-size ) ) + ( 2 * var( --logo-radius ) ) );
 	content: "\ea42";
 }
 
@@ -151,7 +157,7 @@ body {
 .plan .lastupdated {
 	order: 3;
 	padding: 1em 0;
-	margin: 1em var( --negative-gutter-width );
+	margin: 1em calc( -1 * var( --gutter-width ) );
 	border-top: 1px solid var( --gray-40 );
 	border-bottom: 1px solid var( --gray-40 );
 	background-color: var( --gray-5 );
