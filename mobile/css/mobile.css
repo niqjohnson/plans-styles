@@ -105,7 +105,7 @@ body {
 
 #mainlink_edit:after,
 .opt_link[href='quicklove.php']:after,
-#autoread .current .autoreadentry:first-of-type a:after {
+#autoread .autoreadentry:first-of-type a:after {
 	display: block;
 	color: var( --gray-60 );
 	font-family: 'icomoon' !important;
@@ -136,7 +136,7 @@ body {
 	margin-left: calc( ( -0.5 * var( --icon-font-size ) ) + ( 1.5 * var( --logo-radius ) ) );
 	content: "\e9da";
 }
-#autoread .current .autoreadentry:first-of-type a:after {
+#autoread .autoreadentry:first-of-type a:after {
 	position: fixed;
 	bottom: 8%;
 	right: var( --gutter-width );
@@ -145,6 +145,15 @@ body {
 	color: var( --black );
 	content: "\ea42";
 	font-size: 10vmin;
+}
+#autoread .autoreadlevel.even.first .autoreadentry:first-of-type a:after {
+	z-index: 10;
+}
+#autoread .autoreadlevel.odd .autoreadentry:first-of-type a:after {
+	z-index: 9;
+}
+#autoread .autoreadlevel.even.last .autoreadentry:first-of-type a:after {
+	z-index: 8;
 }
 
 /* ==========================================================================
