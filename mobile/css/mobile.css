@@ -1,7 +1,7 @@
 @media (max-width: 980px) {
 
 /* ==========================================================================
-	 Variables
+	 Sizes
    ========================================================================== */
 
 body {
@@ -9,6 +9,7 @@ body {
 	--logo-radius:           12vmin;
 	--header-padding:         4vmin;
 	--icon-font-size:         5vmin;
+	--body-text-size:         4.5vmin;
 }
 
 /* ==========================================================================
@@ -155,13 +156,13 @@ body {
 }
 #autoread .autoreadentry:first-of-type a:after {
 	position: fixed;
-	bottom: 8%;
+	bottom: 6%;
 	right: var( --gutter-width );
 	background-color: var( --white );
-	border-radius: 10vmin;
+	border-radius: 12vmin;
 	color: var( --black );
 	content: "\ea42";
-	font-size: 10vmin;
+	font-size: 12vmin;
 }
 #autoread .autoreadlevel.even.first .autoreadentry:first-of-type a:after {
 	z-index: 10;
@@ -224,7 +225,7 @@ body {
 	line-height: 1.4;
 }
 .plan .sub {
-	font-size: 4vmin;
+	font-size: var( --body-text-size );
 	line-height: 1.5;
 	word-wrap: break-word;
 }
@@ -241,7 +242,7 @@ body {
 	display: inline-block;
 	margin-right: 1vmin;
 	color: var( --gray-80 );
-	font-size: 4vmin;
+	font-size: var( --body-text-size );
 }
 #autoreadadd .radioinput input[type='radio'] {
 	width: 4vmin;
@@ -386,7 +387,7 @@ body {
 	padding-bottom: 3vmin;
 	border-bottom: 1px solid var( --gray-40 );
 	margin-bottom: 3vmin;
-	font-size: 4vmin;
+	font-size: var( --body-text-size );
 }
 #poweredby,
 #legal {
