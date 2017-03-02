@@ -369,6 +369,36 @@ body {
 }
 
 /* ==========================================================================
+   Home
+   ========================================================================== */
+
+#planspage_home #main {
+	padding: 0 var( --gutter-width );
+	font-size: var( --body-text-size );
+}
+
+/* ==========================================================================
+   Planwatch
+   ========================================================================== */
+
+#planspage_planwatch #main {
+	padding: 0 var( --gutter-width );
+	font-size: var( --body-text-size );
+}
+#planwatchtimeform {
+	margin-bottom: 10vmin;
+}
+#planwatchtimeform .form_prompt {
+	margin-bottom: 1vmin;
+}
+#mytime {
+	font-size: 4.5vmin;
+}
+#new_plan_list > li + li {
+	margin-top: 0.5em;
+}
+
+/* ==========================================================================
    Bottom navigation
    ========================================================================== */
 
