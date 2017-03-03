@@ -163,10 +163,10 @@ body {
 	bottom: 6%;
 	right: var( --gutter-width );
 	background-color: var( --white );
-	border-radius: 12vmin;
+	border-radius: 14vmin;
 	color: var( --black );
 	content: "\ea42";
-	font-size: 12vmin;
+	font-size: 14vmin;
 }
 #autoread .autoreadlevel.even.first .autoreadentry:first-of-type a:after {
 	z-index: 10;
