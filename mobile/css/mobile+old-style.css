@@ -1,0 +1,945 @@
+@media (max-width: 980px) {
+
+/* ==========================================================================
+	 Sizes
+   ==========================================================================
+
+body {
+	--gutter-width:           6vw;
+	--logo-radius:           12vmin;
+	--header-padding:         4vmin;
+	--icon-font-size:         5vmin;
+	--body-text-size:         4.5vmin;
+}*/
+
+/* ==========================================================================
+   Colors
+   ==========================================================================
+
+body {
+	--black:     #101820;
+	--dark-gray: #43484e;
+	--gray:      #5a5d61;
+	--gray-80:   #75787b;
+	--gray-60:   #919395;
+	--gray-40:   #b4b5b6;
+	--gray-20:   #d2d3d5;
+	--gray-10:   #e7e8e9;
+	--gray-5:    #f7f8f9;
+	--white:     #fff;
+}*/
+
+/* ==========================================================================
+	 Page structure
+   ========================================================================== */
+
+body {
+	margin: 0;
+}
+#wrapper {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+#nav {
+	-webkit-order: 2;
+	order: 2;
+}
+#main {
+	-webkit-order: 1;
+	order: 1;
+	padding: 0 6vw;
+	margin-top: calc( 12vmin + 12vmin );
+}
+#footer {
+	-webkit-order: 3;
+	order: 3;
+}
+
+/* ==========================================================================
+	 Global typography
+   ========================================================================== */
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte');
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte#iefix') format('embedded-opentype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.ttf?shkte') format('truetype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.woff?shkte') format('woff'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.svg?shkte#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	color: #101820;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+							 "Segoe UI Symbol";
+	font-size: 16px;
+ }
+ #main {
+	 font-size: 4.5vmin;
+ }
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+ .submitinput {
+ 	padding: 2vmin 4vmin;
+ 	border-radius: 2vmin;
+ 	background-color: #101820;
+ 	color: #fff;
+ 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+ 	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+ 							 "Segoe UI Symbol";
+ 	font-size: 3.5vmin;
+ 	font-weight: 300;
+ }
+
+/* ==========================================================================
+   Top navigation
+   ========================================================================== */
+
+#logo {
+	width: 100%;
+	padding-bottom: 4vmin;
+	border-bottom: 1px solid #b4b5b6;
+	position: absolute;
+	top: 4vmin;
+	left: 0;
+	text-align: center;
+}
+#logo a {
+	font-size: 0;
+	text-decoration: none;
+}
+#logo a:before {
+	display: inline-block;
+	width: 12vmin;
+	height: 12vmin;
+	border-radius: 12vmin;
+	background-color: #101820;
+	color: #fff;
+	content: '[p]';
+	font-size: calc( 12vmin - 6vmin );
+	font-weight: 200;
+	line-height: 11vmin;
+}
+
+/* Icons (font from Icomoon) */
+
+#mainlink_edit:after,
+.opt_link[href='quicklove.php']:after,
+#autoread .autoreadentry:first-of-type a:after {
+	display: block;
+	color: #919395;
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+  speak: none;
+	text-decoration: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#mainlink_edit:after,
+.opt_link[href='quicklove.php']:after {
+	position: absolute;
+	top: calc( ( 12vmin / 2 ) + 4vmin );
+	left: 50%;
+	font-size: 5vmin;
+}
+#mainlink_edit:after {
+	margin-top: calc( -0.3 * 5vmin );
+	margin-left: calc( ( -0.5 * 5vmin ) - ( 1.5 * 12vmin ) );
+	content: "\e906";
+}
+.opt_link[href='quicklove.php']:after {
+	margin-top: calc( -0.3 * 5vmin );
+	margin-left: calc( ( -0.5 * 5vmin ) + ( 1.5 * 12vmin ) );
+	content: "\e9da";
+}
+#autoread .autoreadentry:first-of-type a:after {
+	position: fixed;
+	bottom: 6%;
+	right: 6vw;
+	background-color: #fff;
+	border-radius: 14vmin;
+	color: #101820;
+	content: "\ea42";
+	font-size: 14vmin;
+}
+#autoread .autoreadlevel.even.first .autoreadentry:first-of-type a:after {
+	z-index: 10;
+}
+#autoread .autoreadlevel.odd .autoreadentry:first-of-type a:after {
+	z-index: 9;
+}
+#autoread .autoreadlevel.even.last .autoreadentry:first-of-type a:after {
+	z-index: 8;
+}
+
+/* ==========================================================================
+	 Read plan
+   ========================================================================== */
+
+.plan #header {
+	margin-bottom: 10vmin;
+}
+.plan #header ul {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+}
+.plan .username {
+	-webkit-order: 1;
+	order: 1;
+	margin-bottom: 0.25rem;
+	font-size: 9vmin;
+	font-weight: 600;
+}
+.plan .username .title {
+	display: none;
+}
+.plan .lastupdated,
+.plan .lastlogin {
+	display: none;
+}
+.plan .planname {
+	-webkit-order: 2;
+	order: 2;
+	color: #919395;
+	font-size: 4vmin;
+}
+.plan .planname .title {
+	display: none;
+}
+.plan .plan_text {
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+#autoreadadd {
+	padding: 5vmin 6vw;
+	border-top: 1px solid #b4b5b6;
+	border-bottom: 1px solid #b4b5b6;
+	margin: 3vmin calc( -1 * 6vw ) 0;
+}
+#readadd_levels {
+	display: inline-block;
+}
+#autoreadadd .radioinput {
+	display: inline-block;
+	margin-right: 1vmin;
+	color: #75787b;
+	font-size: 4.5vmin;
+}
+#autoreadadd .radioinput input[type='radio'] {
+	width: 4vmin;
+	height: 4vmin;
+	border-radius: 4vmin;
+}
+#autoreadadd .submitinput {
+	margin-top: -2vmin;
+	float: right;
+}
+#block {
+	padding: 5vmin 0;
+}
+#block + .infomessage {
+	color: #75787b;
+	font-size: 2.5vmin;
+}
+
+/* ==========================================================================
+   Edit plan
+   ========================================================================== */
+
+#editbox {
+	position: relative;
+}
+#edit_textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 60vmin;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+							 "Segoe UI Symbol";
+	font-size: 4.5vmin;
+	line-height: 1.4;
+}
+#edit_textarea + br {
+	display: none;
+}
+#edit_fill_meter {
+	padding: 5vmin 6vw;
+	border-top: 1px solid #b4b5b6;
+	border-bottom: 1px solid #b4b5b6;
+	margin: 0 calc( -1 * 6vw );
+	background-color: #f7f8f9;
+	text-align: right;
+}
+#edit_fill_meter .fill_percent {
+	margin-right: 6vw;
+	font-size: 3vmin;
+}
+#editbox .submitinput {
+	position: absolute;
+ 	left: 6vw;
+ 	bottom: 2.5vmin;
+}
+
+/* ==========================================================================
+   Search and quicklove
+   ========================================================================== */
+
+#searchform {
+	padding: 0 0 10vmin 0;
+}
+#searchform > form > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#searchform #search_opts {
+	-webkit-flex: 2 auto;
+	flex: 2 auto;
+	padding-right: 3vmin;
+	position: relative;
+}
+#searchform #search_opts .checkboxinput {
+	margin-top: 2vmin;
+	position: absolute;
+}
+#mysearch {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 4.5vmin;
+}
+#planlove0 {
+	display: inline;
+	width: 4vmin;
+	height: 4vmin;
+}
+#planlove0 + .prompt_description {
+	font-size: 3.5vmin;
+	vertical-align: top;
+}
+#search_results {
+	list-style-type: none;
+	font-size: 4.5vmin;
+}
+#search_results > li + li {
+	padding-top: 1em;
+	border-top: 1px solid #b4b5b6;
+	margin-top: 1em;
+}
+.result_user_group .planlove {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	font-size: 5vmin;
+	font-weight: 600;
+}
+.result_user_group > span {
+	color: #75787b;
+	font-size: 3vmin;
+}
+.result_user_group > span:before {
+	content: '(';
+}
+.result_user_group > span:after {
+	content: ')';
+}
+.result_sublist {
+	padding: 0;
+	list-style-type: none;
+}
+.result_sublist > li + li {
+	margin-top: 1em;
+}
+
+/* ==========================================================================
+   Planwatch
+   ========================================================================== */
+
+#planwatchtimeform {
+	margin-bottom: 10vmin;
+}
+#planwatchtimeform .form_prompt {
+	margin-bottom: 1vmin;
+}
+#mytime {
+	font-size: 4.5vmin;
+}
+#new_plan_list > li + li {
+	margin-top: 0.5em;
+}
+
+/* ==========================================================================
+   Bottom navigation
+   ========================================================================== */
+
+#nav {
+	border-top: 1px solid #b4b5b6;
+	padding: 6vmin 6vw;
+	margin-top: 12vmin;
+	background-color: #f7f8f9;
+}
+#nav > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+#finger {
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	margin-bottom: 6vmin;
+}
+#links,
+#autoread {
+	-webkit-flex: 1 auto;
+	flex: 1 auto;
+}
+#finger > form > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#finger .textinput {
+	-webkit-flex: 2 auto;
+	flex: 2 auto;
+	padding-right: 3vmin;
+}
+#searchname {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 4.5vmin;
+}
+#links > h2,
+#autoread > h2 {
+	margin: 0 0 2vmin 0;
+	font-size: 5vmin;
+	font-weight: 300;
+	line-height: 1;
+}
+#links .linkslist,
+#autoread ul {
+	padding: 0;
+	margin: 0;
+	font-size: 4vmin;
+	list-style-type: none;
+}
+#links .linkslist li + li,
+.autoreadentry + .autoreadentry {
+	margin-top: 1vmin;
+}
+.autoreadlevel + .autoreadlevel {
+	margin-top: 3vmin;
+}
+.autoreadname {
+	margin-bottom: 1vmin;
+}
+.autoreadname .autoreadlink,
+.autoreadname .markasread {
+	color: #101820;
+	font-size: 3.5vmin;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background-color: #f7f8f9;
+}
+#justupdated,
+#poweredby,
+#legal {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding-right: 6vw;
+	padding-left: 6vw;
+}
+#justupdated {
+	-webkit-order: 1;
+	order: 1;
+	padding-bottom: 3vmin;
+	border-bottom: 1px solid #b4b5b6;
+	margin-bottom: 3vmin;
+	font-size: 4.5vmin;
+}
+#poweredby,
+#legal {
+	color: #5a5d61;
+	font-size: 3vmin;
+}
+#poweredby {
+	-webkit-order: 3;
+	order: 3;
+}
+#poweredby > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#poweredby > div .logo {
+	display: block;
+	margin: 1.4em 0 2.8em 0;
+	-webkit-order: 2;
+	order: 2;
+}
+#poweredby > div > span {
+	display: block;
+	-webkit-order: 1;
+	order: 1;
+}
+#legal {
+	-webkit-order: 2;
+	order: 2;
+	margin-bottom: 1.4em;
+}
+}
+
+@media (min-width: 981px) {
+
+	/* postmodern like modern */
+	/* Mixin CSS to approximate the look of the 'modern' interface in
+	 * the newer 'postmodern' interface.
+	 *
+	 * 24 May 2013 baldwint
+	 */
+
+	/* starter defaults */
+	/**
+ * Some styling that almost all styles will want
+ */
+
+/* Make the powered by bar a bit more obvious and stylish. */
+#poweredby {
+	font-size: larger;
+	clear: left;
+}
+
+#poweredby .logo {
+	vertical-align: middle;
+}
+
+/* Display the long version of dates in the plan header */
+.short {
+	display: none;
+}
+
+/* Float items within a set next to each other */
+.formitemset .form_prompt, .formitemset .formitemset_label {
+	float: left;
+	clear: none;
+}
+/* But in general, clear prompts to their own line */
+.formitemset, .form_prompt {
+	clear: left;
+}
+/* Keep text and textarea labels above the prompt */
+.textareainput label, .textinput label, .passwordinput label {
+	display: block;
+}
+
+/* float the Read button next to the finger form */
+#finger .form_prompt {
+	float: left;
+}
+/* float the submit button next to the add plan form */
+#autoreadadd .submitinput {
+	float: left;
+	clear:none;
+}
+
+/* Styling for the fill meter when editing */
+#edit_fill_meter .fill_bar {
+	background: url("//grinnellplans.com/images/old/unfilled.gif");
+	float: left;
+	width: 100px;
+	height: 16px;
+}
+#edit_fill_meter .full_amount {
+	background: url("//grinnellplans.com/images/old/filled.gif");
+	height: 1em;
+	/* Default to no width if javascript is turned off */
+	width: 0%;
+}
+#edit_fill_meter .fill_percent {
+	float: left;
+}
+#edit_fill_meter.danger .full_amount {
+	background: url("//grinnellplans.com/images/old/danger.gif");
+}
+
+/* Some styling with small icons for various messages */
+.alertmessage, .infomessage, .requestmessage {
+	padding: 0.4em;
+}
+.alertmessage .title {
+	height: 16px;
+	display: block;
+	font-style: italic;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-bottom: 0.3em;
+	background: url("//grinnellplans.com/images/icons/famfamfam/exclamation.png") no-repeat left center;
+}
+.infomessage .body, .requestmessage .body {
+	padding-left: 20px;
+}
+.infomessage .title, .requestmessage .title {
+	display: none;
+}
+.infomessage .body {
+	background: url("//grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left center;
+}
+.requestmessage .body {
+	background: url("//grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left center;
+}
+/* IE screws up the background image positioning when we span more than one line, so hack IE7... */
+*:first-child+html .infomessage .body {
+	background: url("//grinnellplans.com/images/icons/famfamfam/information.png") no-repeat left 8px;
+}
+*:first-child+html .requestmessage .body {
+	background: url("//grinnellplans.com/images/icons/famfamfam/help.png") no-repeat left 8px;
+}
+/* ...and just hide them altogether for IE6 */
+* html .infomessage .body, * html .requestmessage .body, * html .alertmessage .title {
+	background-image: none;
+	padding-left: 0;
+}
+
+/* Float the poll options so the result numbers will line up with them */
+.polloption .form_prompt {
+	display: block;
+	float: left;
+	width: 20em;
+}
+
+/* Float the new thread link left */
+#notes_new_thread {
+	float: left;
+}
+/* Center the nav stuff */
+.notes_header {
+	width: 100%;
+	text-align: center;
+}
+/* Put some whitespace in between nav elements */
+.notes_header .oldest {
+	margin-left: 0.4em;
+}
+.notes_header .newest {
+	margin-right: 0.4em;
+}
+.notes_header .newer, .notes_header .older, .notes_header .even_newer, .notes_header .even_older, .notes_header .current {
+	margin: 0em 0.2em;
+}
+/* Hide inactive nav elements */
+.notes_header .disabled {
+	display: none;
+}
+/* Except the first and last arrows */
+.notes_header .newest, .notes_header .oldest {
+	display: inline;
+}
+
+/* Line up notes post stuff in a sensible fashion */
+.notes_post_header .post_id {
+	width: 4em;
+	float: left;
+}
+.notes_post_header .post_author {
+	float: left;
+	width: 7em;
+}
+.notes_post_header .post_date {
+	float: left;
+}
+.notes_post_header .post_votes {
+	float: right;
+}
+.notes_post_content {
+	clear: both;
+}
+
+/* Right-align the # Posts column on Notes */
+#notes_board td.num_posts {
+	text-align: right;
+	padding-right: 0.6em;
+}
+
+	/* stop floating form fields before we all get a headache */
+	.formitemset .form_prompt, .formitemset .formitemset_label {
+	    float: none;
+	    clear: none;
+	    display: inline;
+	}
+	.formitemset, .form_prompt {
+		float: none;
+	    clear: none;
+	}
+	#autoreadadd .submitinput {
+	    float: none;
+	    clear: none;
+	    display: inline;
+	}
+
+	/* notes board also has some overzealous floating */
+	#notes_new_thread{
+	  float: none;
+	  display: block;
+	  margin-bottom: 1em;
+	}
+	.notes_post_content {
+	  clear: none;
+	  margin-bottom: 1em;
+	}
+	.notes_post_header .post_id,
+	.notes_post_header .post_author,
+	.notes_post_header .post_date {
+	  float: none;
+	  display: inline-block;
+	}
+	/*.notes_post_header .post_votes {
+	 * float: none;
+	 * display: inline-block;
+	 * }
+	 */
+
+	/* put autoreadadd in the middle */
+	#autoreadadd {
+	  text-align: center;
+	  margin-left: 30%;
+	  margin-right: 30%;
+	  margin-top: 1em;
+	  padding: 0.5em;
+	}
+
+	/* Show an image for the logo */
+	#logo a {
+		display: block;
+		background: url("//grinnellplans.com/images/logo-small.png") no-repeat;
+		height: 70px;
+		width: 180px;
+		/* Scooch the text out of view */
+		text-indent: -9999px;
+	}
+
+	#links, #autoread {
+	  padding: 1em;
+	  margin-top: 1em;
+	}
+
+	/* no bullets for these lists */
+	#links ul, #header ul, #autoread ul, ul#notes_thread {
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+	}
+
+	#links li, #autoread li {
+	  margin-left: 1em;
+	  margin-top: 0.3em;
+	}
+
+	#links h2 { display: none; }
+	#autoread h2 { font-size: 16px; }
+
+	div#nav {
+	  max-width: 200px;
+	  float: left;
+	  margin-left: 5px;
+	  padding:5px;
+	}
+
+	div#footer {
+	    clear: both;
+	    margin-top: 3em;
+	}
+
+	div#footer div { margin-top: 1em;}
+
+	div#main {
+	    margin-left:220px;
+	    padding-top: 20px;
+	}
+
+	/* header styling */
+	#header li { margin-top: 0.2em; }
+	#header span.title { font-weight: bold; }
+	#header li.username span.value { font-weight: bold; }
+	#header li.planname span.value { text-decoration: underline; }
+
+	/* edit area */
+	textarea#edit_textarea { width: 98%; }
+
+	/* secrets */
+	div.secret                  { margin-top: 1em; }
+	div.secret p.sub            { margin-top: 0.5em; }
+	div.secret span.date_posted { font-weight: bold; }
+
+	/* only show one autoread list */
+	li.autoreadlevel.notcurrent a.markasread { display: none; }
+	li.autoreadlevel.notcurrent ul           { display: none; }
+
+#af_loading {
+  background: url("//www.grinnellplans.com/images/old/unfilled.gif);");
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: left;
+}
+
+/* Fix for PRE double-spacing [bug 21] */
+pre br {display:none}
+/* End fix */
+
+body {
+    color: #000;
+    background-color: #fff;
+    background: #fff
+}
+
+a:link {
+    text-decoration: none;
+    color: #f00
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: #99b
+}
+
+
+a:hover {
+    color: #f00;
+    text-decoration: underline
+}
+
+
+
+p.logo, #logo a {
+    background: #000 url("//grinnellplans.com/images/logo-small.png") no-repeat;
+}
+p.logo {
+    padding: 0.4cm 2.25cm
+}
+
+table.mainpanel, div#nav {
+    background: #000
+}
+
+#autoread h2 { color: white; }
+
+/*here
+*/
+
+
+
+table.lowerpanel {
+    color: #fff
+}
+
+p.imagelev1 {
+    background: #000 no-repeat;
+    padding-right: 0.15cm
+}
+
+p.imagelev2 {
+ /*   background: #000
+url("right.gif")
+no-repeat; */
+    margin-left: 0.25cm;
+    padding-right: 0.5cm
+}
+p.imagelev3 {
+/*    background: #000
+url("right.gif")
+no-repeat;*/
+    margin-left: 0.5cm;
+    padding-right: 0.5cm
+}
+
+p.main {
+    font-weight: bold
+}
+
+p.main2 {
+    font-weight: bold
+}
+
+p.main3 {
+    font-weight: bold
+}
+
+p.main4 {
+    font-weight: bold
+}
+td.left {background-color: #000000}
+
+p.sub {
+
+    color: #000;
+    margin-bottom: 2px;
+    padding: 7px;
+    border-top: solid;
+    border-width: thin
+
+}
+
+p.sub2 {
+    background: #e1e1e1;
+    color: #000;
+    border-style: solid;
+    border-width: thin;
+    border-color: #ecaaa9;
+    margin-bottom: 2px
+
+}
+
+/***************
+ * Notes Board *
+ ***************/
+.noteslight, #notes_board tr.even, #notes_thread li.even {
+  background: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #777;
+}
+.notesdark, #notes_board tr.odd, #notes_thread li.odd {
+  background: #ddd;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #777;
+
+
+}
