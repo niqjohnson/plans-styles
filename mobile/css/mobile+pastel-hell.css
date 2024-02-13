@@ -1,0 +1,765 @@
+@media (max-width: 980px) {
+
+/* ==========================================================================
+	 Sizes
+   ==========================================================================
+
+body {
+	--gutter-width:           6vw;
+	--logo-radius:           12vmin;
+	--header-padding:         4vmin;
+	--icon-font-size:         5vmin;
+	--body-text-size:         4.5vmin;
+}*/
+
+/* ==========================================================================
+   Colors
+   ==========================================================================
+
+body {
+	--black:     #101820;
+	--dark-gray: #43484e;
+	--gray:      #5a5d61;
+	--gray-80:   #75787b;
+	--gray-60:   #919395;
+	--gray-40:   #b4b5b6;
+	--gray-20:   #d2d3d5;
+	--gray-10:   #e7e8e9;
+	--gray-5:    #f7f8f9;
+	--white:     #fff;
+}*/
+
+/* ==========================================================================
+	 Page structure
+   ========================================================================== */
+
+body {
+	margin: 0;
+}
+#wrapper {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+#nav {
+	-webkit-order: 2;
+	order: 2;
+}
+#main {
+	-webkit-order: 1;
+	order: 1;
+	padding: 0 6vw;
+	margin-top: calc( 12vmin + 12vmin );
+}
+#footer {
+	-webkit-order: 3;
+	order: 3;
+}
+
+/* ==========================================================================
+	 Global typography
+   ========================================================================== */
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte');
+	src: url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.eot?shkte#iefix') format('embedded-opentype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.ttf?shkte') format('truetype'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.woff?shkte') format('woff'),
+	     url('https://niqjohnson.github.io/plans-styles/mobile/fonts/icomoon.svg?shkte#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	color: #101820;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+							 "Segoe UI Symbol";
+	font-size: 16px;
+ }
+ #main {
+	 font-size: 4.5vmin;
+ }
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+ .submitinput {
+ 	padding: 2vmin 4vmin;
+ 	border-radius: 2vmin;
+ 	background-color: #101820;
+ 	color: #fff;
+ 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+ 	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+ 							 "Segoe UI Symbol";
+ 	font-size: 3.5vmin;
+ 	font-weight: 300;
+ }
+
+/* ==========================================================================
+   Top navigation
+   ========================================================================== */
+
+#logo {
+	width: 100%;
+	padding-bottom: 4vmin;
+	border-bottom: 1px solid #b4b5b6;
+	position: absolute;
+	top: 4vmin;
+	left: 0;
+	text-align: center;
+}
+#logo a {
+	font-size: 0;
+	text-decoration: none;
+}
+#logo a:before {
+	display: inline-block;
+	width: 12vmin;
+	height: 12vmin;
+	border-radius: 12vmin;
+	background-color: #101820;
+	color: #fff;
+	content: '[p]';
+	font-size: calc( 12vmin - 6vmin );
+	font-weight: 200;
+	line-height: 11vmin;
+}
+
+/* Icons (font from Icomoon) */
+
+#mainlink_edit:after,
+.opt_link[href='quicklove.php']:after,
+#autoread .autoreadentry:first-of-type a:after {
+	display: block;
+	color: #919395;
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+  speak: none;
+	text-decoration: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#mainlink_edit:after,
+.opt_link[href='quicklove.php']:after {
+	position: absolute;
+	top: calc( ( 12vmin / 2 ) + 4vmin );
+	left: 50%;
+	font-size: 5vmin;
+}
+#mainlink_edit:after {
+	margin-top: calc( -0.3 * 5vmin );
+	margin-left: calc( ( -0.5 * 5vmin ) - ( 1.5 * 12vmin ) );
+	content: "\e906";
+}
+.opt_link[href='quicklove.php']:after {
+	margin-top: calc( -0.3 * 5vmin );
+	margin-left: calc( ( -0.5 * 5vmin ) + ( 1.5 * 12vmin ) );
+	content: "\e9da";
+}
+#autoread .autoreadentry:first-of-type a:after {
+	position: fixed;
+	bottom: 6%;
+	right: 6vw;
+	background-color: #fff;
+	border-radius: 14vmin;
+	color: #101820;
+	content: "\ea42";
+	font-size: 14vmin;
+}
+#autoread .autoreadlevel.even.first .autoreadentry:first-of-type a:after {
+	z-index: 10;
+}
+#autoread .autoreadlevel.odd .autoreadentry:first-of-type a:after {
+	z-index: 9;
+}
+#autoread .autoreadlevel.even.last .autoreadentry:first-of-type a:after {
+	z-index: 8;
+}
+
+/* ==========================================================================
+	 Read plan
+   ========================================================================== */
+
+.plan #header {
+	margin-bottom: 10vmin;
+}
+.plan #header ul {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+}
+.plan .username {
+	-webkit-order: 1;
+	order: 1;
+	margin-bottom: 0.25rem;
+	font-size: 9vmin;
+	font-weight: 600;
+}
+.plan .username .title {
+	display: none;
+}
+.plan .lastupdated,
+.plan .lastlogin {
+	display: none;
+}
+.plan .planname {
+	-webkit-order: 2;
+	order: 2;
+	color: #919395;
+	font-size: 4vmin;
+}
+.plan .planname .title {
+	display: none;
+}
+.plan .plan_text {
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+#autoreadadd {
+	padding: 5vmin 6vw;
+	border-top: 1px solid #b4b5b6;
+	border-bottom: 1px solid #b4b5b6;
+	margin: 3vmin calc( -1 * 6vw ) 0;
+}
+#readadd_levels {
+	display: inline-block;
+}
+#autoreadadd .radioinput {
+	display: inline-block;
+	margin-right: 1vmin;
+	color: #75787b;
+	font-size: 4.5vmin;
+}
+#autoreadadd .radioinput input[type='radio'] {
+	width: 4vmin;
+	height: 4vmin;
+	border-radius: 4vmin;
+}
+#autoreadadd .submitinput {
+	margin-top: -2vmin;
+	float: right;
+}
+#block {
+	padding: 5vmin 0;
+}
+#block + .infomessage {
+	color: #75787b;
+	font-size: 2.5vmin;
+}
+
+/* ==========================================================================
+   Edit plan
+   ========================================================================== */
+
+#editbox {
+	position: relative;
+}
+#edit_textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 60vmin;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+	 						 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+							 "Segoe UI Symbol";
+	font-size: 4.5vmin;
+	line-height: 1.4;
+}
+#edit_textarea + br {
+	display: none;
+}
+#edit_fill_meter {
+	padding: 5vmin 6vw;
+	border-top: 1px solid #b4b5b6;
+	border-bottom: 1px solid #b4b5b6;
+	margin: 0 calc( -1 * 6vw );
+	background-color: #f7f8f9;
+	text-align: right;
+}
+#edit_fill_meter .fill_percent {
+	margin-right: 6vw;
+	font-size: 3vmin;
+}
+#editbox .submitinput {
+	position: absolute;
+ 	left: 6vw;
+ 	bottom: 2.5vmin;
+}
+
+/* ==========================================================================
+   Search and quicklove
+   ========================================================================== */
+
+#searchform {
+	padding: 0 0 10vmin 0;
+}
+#searchform > form > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#searchform #search_opts {
+	-webkit-flex: 2 auto;
+	flex: 2 auto;
+	padding-right: 3vmin;
+	position: relative;
+}
+#searchform #search_opts .checkboxinput {
+	margin-top: 2vmin;
+	position: absolute;
+}
+#mysearch {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 4.5vmin;
+}
+#planlove0 {
+	display: inline;
+	width: 4vmin;
+	height: 4vmin;
+}
+#planlove0 + .prompt_description {
+	font-size: 3.5vmin;
+	vertical-align: top;
+}
+#search_results {
+	list-style-type: none;
+	font-size: 4.5vmin;
+}
+#search_results > li + li {
+	padding-top: 1em;
+	border-top: 1px solid #b4b5b6;
+	margin-top: 1em;
+}
+.result_user_group .planlove {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	font-size: 5vmin;
+	font-weight: 600;
+}
+.result_user_group > span {
+	color: #75787b;
+	font-size: 3vmin;
+}
+.result_user_group > span:before {
+	content: '(';
+}
+.result_user_group > span:after {
+	content: ')';
+}
+.result_sublist {
+	padding: 0;
+	list-style-type: none;
+}
+.result_sublist > li + li {
+	margin-top: 1em;
+}
+
+/* ==========================================================================
+   Planwatch
+   ========================================================================== */
+
+#planwatchtimeform {
+	margin-bottom: 10vmin;
+}
+#planwatchtimeform .form_prompt {
+	margin-bottom: 1vmin;
+}
+#mytime {
+	font-size: 4.5vmin;
+}
+#new_plan_list > li + li {
+	margin-top: 0.5em;
+}
+
+/* ==========================================================================
+   Bottom navigation
+   ========================================================================== */
+
+#nav {
+	border-top: 1px solid #b4b5b6;
+	padding: 6vmin 6vw;
+	margin-top: 12vmin;
+	background-color: #f7f8f9;
+}
+#nav > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+#finger {
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	margin-bottom: 6vmin;
+}
+#links,
+#autoread {
+	-webkit-flex: 1 auto;
+	flex: 1 auto;
+}
+#finger > form > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#finger .textinput {
+	-webkit-flex: 2 auto;
+	flex: 2 auto;
+	padding-right: 3vmin;
+}
+#searchname {
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 4.5vmin;
+}
+#links > h2,
+#autoread > h2 {
+	margin: 0 0 2vmin 0;
+	font-size: 5vmin;
+	font-weight: 300;
+	line-height: 1;
+}
+#links .linkslist,
+#autoread ul {
+	padding: 0;
+	margin: 0;
+	font-size: 4vmin;
+	list-style-type: none;
+}
+#links .linkslist li + li,
+.autoreadentry + .autoreadentry {
+	margin-top: 1vmin;
+}
+.autoreadlevel + .autoreadlevel {
+	margin-top: 3vmin;
+}
+.autoreadname {
+	margin-bottom: 1vmin;
+}
+.autoreadname .autoreadlink,
+.autoreadname .markasread {
+	color: #101820;
+	font-size: 3.5vmin;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background-color: #f7f8f9;
+}
+#justupdated,
+#poweredby,
+#legal {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding-right: 6vw;
+	padding-left: 6vw;
+}
+#justupdated {
+	-webkit-order: 1;
+	order: 1;
+	padding-bottom: 3vmin;
+	border-bottom: 1px solid #b4b5b6;
+	margin-bottom: 3vmin;
+	font-size: 4.5vmin;
+}
+#poweredby,
+#legal {
+	color: #5a5d61;
+	font-size: 3vmin;
+}
+#poweredby {
+	-webkit-order: 3;
+	order: 3;
+}
+#poweredby > div {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#poweredby > div .logo {
+	display: block;
+	margin: 1.4em 0 2.8em 0;
+	-webkit-order: 2;
+	order: 2;
+}
+#poweredby > div > span {
+	display: block;
+	-webkit-order: 1;
+	order: 1;
+}
+#legal {
+	-webkit-order: 2;
+	order: 2;
+	margin-bottom: 1.4em;
+}
+}
+
+@media (min-width: 981px) {
+	/* ###Main stuff */
+
+	/* postmodern like modern */
+	@import url('//grinnellplans.com/styles/modern.css');
+
+	/* Fix for PRE double-spacing [bug 21] */
+	pre br {display:none}
+	/* End fix */
+
+	body {
+	color: #000000;
+	background-color: #ffffff;
+	background: #ffffff
+	}
+
+	p.logo {
+	background: #ffffff url("//grinnellplans.com/images/logo-small.png") no-repeat;
+	padding: 0.3cm 2.6cm
+	}
+
+	/* Set the main table */
+	table.main {border-style: none none none none }
+
+	/* Set the main panel */
+	table.mainpanel {border-style: none none none none }
+
+	/* Set the lower panel */
+	table.lowerpanel {border-style: none none none none }
+
+	/* Plan Display page stuff */
+
+	/* Set the plan container text */
+	p.sub {
+	background: #f1f1f1;
+	color: #000000;
+	border-style: solid solid solid solid;
+	border-width: thin;
+	border-color: #a9aaec;
+	margin-bottom: 2px;
+	font-variant: none; 
+	padding: 10px
+	}
+
+	/* Set the autoread container text */
+	p.sub2 {
+	background: #e1e1e1;
+	color: #000000;
+	border-style: solid solid solid  solid;
+	border-width: thin;
+	border-color: #ecaaa9;
+	margin-bottom: 2px;
+	font-variant: none
+	}
+
+	/* Plan Of: Text */
+	p.main, #autoread h2, #header li.username span.title {
+	color: #A9AAEC;
+	font-variant: small-caps
+	}
+
+	/* Last Login: Text */
+	p.main2, #header li.lastupdated span.title {
+	margin-left: 1cm;
+	color: #99DC9A;
+	font-variant: small-caps
+	}
+
+	/* Last Update: Text */
+	p.main3, #header li.lastlogin span.title {
+	margin-left: 2cm;
+	color: #DC999A;
+	font-variant: small-caps
+	}
+
+	/* Name: Text */
+	p.main4, #header li.planname span.title {
+	margin-left: 3cm;
+	color: #DC9ADC;
+	font-variant: small-caps
+	}
+
+
+
+
+	/* ###Regular link stuff */
+
+	/* Set the regular image */
+	p.imagelev1, #nav li {
+	background: #ffffff url("//grinnellplans.com/right.gif") no-repeat;
+	}
+	p.imagelev1 { padding: 0.0cm 0.2cm }
+	#nav li     { padding: 0.0cm 0.8cm; margin-left: -0.4cm; }
+
+	/* Set regular links */
+	a:link {
+	text-decoration: none;
+	color: #a9aaec;
+	font-variant: small-caps;
+	font-family: times;
+	}
+
+	/* Set visited links */
+	a:visited {
+	text-decoration: none;
+	color: #a9aaec;
+	font variant: small-caps;
+	font-weight: bold;
+	font-family: times;
+	}
+
+	/* Set onMouseOver type effects */
+	a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+	background-color: #a9aaec
+	}
+
+	/* Set on-plan, to outside links */
+	a.onplan{
+	text-decoration: none;
+	color: #0000ff;
+	background: #f1f1f1
+	}
+
+	/* Set planlove links */
+	p.sub a.planlove{
+	text-decoration: none;
+	color: #0000ff;
+	background: #f1f1f1
+	}
+
+	/* teletyped links should be monospaced */
+	p.sub tt a {
+	font-variant: normal;
+	font-family: monospace;
+	}
+
+
+
+
+
+	/* ###Sub category stuff */
+
+	/* Set the sub image */
+	p.imagelev2, #autoread li {
+	background: #ffffff url("//grinnellplans.com/right2.gif") no-repeat;
+	}
+	p.imagelev2, { padding: 0.0cm 0.2cm }
+	#autoread li { padding: 0.0cm 0.8cm; margin-left: -0.4cm; }
+
+	/* Set the link for sub categories */
+	a.lev2:link, li.autoreadlevel a:link {
+	text-decoration: none;
+	color: #50BED6;
+	font-variant: small-caps;
+	background-color: #ffffff;
+	font-family: times
+	}
+
+	/* Set visited links for sub categories */
+	a.lev2:visited, li.autoreadlevel a:visited {
+	text-decoration: none;
+	color: #50BED6;
+	font variant: small-caps;
+	font-weight: bold;
+	background-color: #ffffff;
+	font-family: times;
+	}
+
+	/* Set hover links for subcategories */
+	a.lev2:hover, li.autoreadlevel a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+	background-color: #50BED6
+	}
+
+	/* Set non-click text for subcategories */
+	p.lev2, li.autoreadlevel {
+	color: #D68080;
+	font-variant: small-caps;
+	}
+
+
+
+
+	/* ###Sub-sub category stuff */
+
+	/* Set the sub-sub image */
+	p.imagelev3, #autoread li.autoreadentry {
+	background: #ffffff url("//grinnellplans.com/right3.gif") no-repeat;
+	}
+	p.imagelev3                { padding: 0.0cm 0.2cm }
+	#autoread li.autoreadentry { padding: 0.0cm 0.8cm; margin-left: -0.4cm; }
+
+	/* Set regular links for sub-sub category */
+	a.lev3:link, #autoread li.autoreadentry a:link {
+	text-decoration: none;
+	color: #2EDFB4;
+	font-variant: small-caps;
+	background-color: #ffffff;
+	font-family: times
+	}
+
+	/* Set visited links for sub-sub category */
+	a.lev3:visited, #autoread li.autoreadentry a:visited  {
+	text-decoration: none;
+	color: #2EDFB4;
+	font-variant: small-caps;
+	font-weight: bold;
+	background-color: #ffffff;
+	font-family: times;
+	}
+
+	/* Set hover links for sub-sub category */
+	a.lev3:hover, #autoread li.autoreadentry a:hover  {
+	color: #ffffff;
+	text-decoration: underline;
+	background-color: #2EDFB4
+	}
+
+
+	/***************
+	* Notes Board *
+	***************/
+	.noteslight, #notes_board tr.even {
+	background: #eee;   
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a9aaec;
+	}            
+	.notesdark, #notes_board tr.odd {
+	background: #e9eaff;   
+	border-style: solid;
+	border-width: 1px;  
+	border-color: #eee;
+	}
+}
